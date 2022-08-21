@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.home {
+  display: flex;
+  background: url(images/bg.png) no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  background-size: cover;
+}
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar.sticky {
+  padding: 20px 0;
+  background-color: #205375;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar a {
+  font: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+.navbar ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar ul li a:hover {
+  color: #f66b0e;
+}
+.details {
+  margin-left: 10%;
+  margin-top: 15%;
+}
+.details h1 {
+  font-size: 50px;
+  color: #f5f5f5;
+  margin-bottom: 10px;
+}
+span {
+  color: #f66b0e;
+}
+.details p {
+  color: white;
+  line-height: 20px;
+}
+.details a {
+  background: #f66b0e;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #efefef;
+  display: inline-block;
+  margin: 30px 0;
+  border-radius: 5px;
+}
+.images {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+.images img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+.images:hover .circles {
+  bottom: 5%;
+}
+
+.images:hover .ramon {
+  left: 45%;
+}
+.menu-btn {
+  color: #efefef;
+  font-size: 200px;
+  display: flex;
+  z-index: 9999999;
+  cursor: pointer;
+  display: none;
+}
+i {
+  font-size: 20px;
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #205375;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 30px;
+  }
+}
